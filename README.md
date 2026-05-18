@@ -433,11 +433,11 @@ The polar transposition based on point-wise *ray-casting*, in which each radial 
 
 To remedy this, the spatial domain is partitioned into **Continuous Annular Sectors**. Each sector $\Omega\_{k,m}$ is defined as the set of points $(r, \theta)$ such that $r \in [r\_k - \Delta r/2,\; r\_k + \Delta r/2]$ and $\theta \in [\theta\_m - \Delta\theta/2,\; \theta\_m + \Delta\theta/2]$, with $r\_k = r\_{min} + (k - 1/2)\Delta r$ denoting the central radius of the $k$-th band and $\theta\_m = m\,\Delta\theta$ the central angle of the $m$-th sector:
 
-$$\Omega_{k,m} = \left\{ (r,\theta) \;\Big|\; r \in \left[ r_k - \frac{\Delta r}{2},\, r_k + \frac{\Delta r}{2} \right],\; \theta \in \left[ \theta_m - \frac{\Delta\theta}{2},\, \theta_m + \frac{\Delta\theta}{2} \right] \right\}$$
+$$\Omega_{k,m} = \left\lbrace (r,\theta) \;\Big|\; r \in \left[ r_k - \frac{\Delta r}{2},\, r_k + \frac{\Delta r}{2} \right],\; \theta \in \left[ \theta_m - \frac{\Delta\theta}{2},\, \theta_m + \frac{\Delta\theta}{2} \right] \right\rbrace$$
 
 **Minimum spatial resolution condition and core exclusion ($r\_{min}$):** The pole ($r = 0$) imposes an area singularity: sector $\Omega\_{k,m}$ has area $\Delta A\_{k,m} \approx r\_k\,\Delta r\,\Delta\theta$ that decreases linearly with $r\_k$. For sufficiently small $r\_k$, $\Delta A\_{k,m} < \Delta x\,\Delta y$, meaning the sector represents a fraction of a pixel, a situation in which the discrete image sampling does not contain statistically independent information to be extracted. Therefore, the exclusion radius $r\_{min}$ is defined as the smallest radius for which the sector area equals or exceeds the original pixel area:
 
-$$r_{min} = \min\left\{ r_k \;\Big|\; r_k\,\Delta r\,\Delta\theta \ge \Delta x\,\Delta y \right\}$$
+$$r_{min} = \min\left\lbrace r_k \;\Big|\; r_k\,\Delta r\,\Delta\theta \ge \Delta x\,\Delta y \right\rbrace$$
 
 This is a **spatial resolution equivalence** condition, ensuring that each active sector $\Omega\_{k,m}$ possesses non-redundant informational content. The effective number of radial depths after core exclusion is $N' = \lceil(R\_{max} - r\_{min})/\Delta r\rceil$.
 
@@ -473,7 +473,7 @@ The polar transposition requires the determination of the symmetry center $(x\_0
 
 The optimal center is determined by the criterion **internal to the method itself**: the point $(x\_0, y\_0)$ that minimizes the variance of the off-diagonal elements of the correlation matrix $\hat{C}\_z$, equivalently, that maximizes the global isonomy of the correlational structure:
 
-$$c^* = \arg\min_{c \in \Omega}\; \mathrm{Var}\bigl\{C_{m,m'}(c)\bigr\}_{m \neq m'}$$
+$$c^* = \arg\min_{c \in \Omega}\; \mathrm{Var}\bigl\lbrace C_{m,m'}(c)\bigr\rbrace_{m \neq m'}$$
 
 In the discrete implementation, the cost function employs the square of the coefficient of variation $CV^2 = \sigma^2 / \mu^2$ of the off-diagonal elements of the correlation matrix, instead of the raw variance. This formulation is invariant to the energy scale of the image and penalizes candidate centers located in empty background regions (air/noise), where $\mu \to 0$ would produce a trivially null variance that would mislead the optimizer via signal degeneracy.
 
