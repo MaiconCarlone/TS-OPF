@@ -413,9 +413,7 @@ flowchart LR
 
 ### Proposal Positioning
 
-The present proposal occupies the upper-right quadrant, **unexplored territory**, by simultaneously combining a physics-inspired higher-degree representation (Local Information Packets with aneular Zernike coefficients${^1}$ in a Hilbert space with Jacobian metric, derived from the ESR formalism) with a hierarchical multi-instance decision architecture (five parallel OPF graphs with spectral conservation, tensorial fusion, and 3D volumetric OPF). This proposal is not an application of OPF to new data: it is a **new representation paradigm** coupled to a **multi-instance use of OPF**. The contribution is bipartite, both in representation engineering (vibrational operators transposed from ESR spectroscopy to MRI) and in decision architecture (vector fusion of multiple forests with spectral conservation and detection by contrast in a *few-shot learning* regime).
-
-${^1}$ Form under study (REVIEW: terms greater than 4).
+The present proposal occupies the **unexplored territory**, by simultaneously combining a physics-inspired higher-degree representation (Local Information Packets with aneular Zernike coefficients${^1}$ in a Hilbert space with Jacobian metric) with a hierarchical multi-instance decision architecture (five parallel OPF graphs with spectral conservation, tensorial fusion, and 3D volumetric OPF). This proposal is not an application of OPF to new data: it is a **new representation paradigm** coupled to a **multi-instance use of OPF**. The contribution is bipartite, both in representation engineering  and in decision architecture (vector fusion of multiple forests with spectral conservation and detection by contrast in a *few-shot learning* regime).
 
 ---
 
