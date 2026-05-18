@@ -1,0 +1,79 @@
+2026-05-18 11:37:27 - INFO - ============================================================
+2026-05-18 11:37:27 - INFO - STUDY: PHASE I EXACERBATION OPERATOR VALIDATION
+2026-05-18 11:37:27 - INFO - ============================================================
+2026-05-18 11:37:27 - INFO - [Operators] Loading state from: /home/maicon/Dropbox/OPFN/RepositorioGit/Simulation/Base de Zernike Polar/Transposition_State.npz
+2026-05-18 11:37:27 - INFO - [Operators] Dimensions: M=360, N'=165, Q=4. Reference sector: m=45 (theta=45.0 deg).
+2026-05-18 11:37:27 - INFO - [Operators] Validating input tensor integrity...
+2026-05-18 11:37:27 - INFO - [Operators] Integrity confirmed. HilbertSpace cached.
+2026-05-18 11:37:27 - INFO - ============================================================
+2026-05-18 11:37:27 - INFO - DIAGNOSTICS: Operator O
+2026-05-18 11:37:27 - INFO - ============================================================
+2026-05-18 11:37:27 - INFO -   correctness_error: 0.0000e+00
+2026-05-18 11:37:27 - INFO -   finite: True
+2026-05-18 11:37:27 - INFO -   piston_range: 5.2434e-03
+2026-05-18 11:37:27 - INFO -   status: PASS
+2026-05-18 11:37:27 - INFO -   tolerance: 1.0000e-12
+2026-05-18 11:37:28 - INFO - Figure exported: /home/maicon/Dropbox/OPFN/RepositorioGit/Simulation/Base de Zernike Polar/figures/Estudo_Operador_O.pdf
+2026-05-18 11:37:28 - INFO - ============================================================
+2026-05-18 11:37:28 - INFO - DIAGNOSTICS: Operator S
+2026-05-18 11:37:28 - INFO - ============================================================
+2026-05-18 11:37:28 - INFO -   correctness_error: 0.0000e+00
+2026-05-18 11:37:28 - INFO -   symmetry_error: 0.0000e+00
+2026-05-18 11:37:28 - INFO -   cosine_in_unit_interval: True
+2026-05-18 11:37:28 - INFO -   cosine_max_abs: 9.7276e-01
+2026-05-18 11:37:28 - INFO -   finite: True
+2026-05-18 11:37:28 - INFO -   cohesion_stats: mean=-1.3969e+00, std=3.3691e+00, min=-6.7749e+00, max=6.9562e+00, median=-2.5785e+00
+2026-05-18 11:37:28 - INFO -   cosine_stats: mean=-2.9762e-01, std=6.8605e-01, min=-9.7276e-01, max=9.6280e-01, median=-7.2425e-01
+2026-05-18 11:37:28 - INFO -   status: PASS
+2026-05-18 11:37:28 - INFO -   tolerance: 1.0000e-12
+2026-05-18 11:37:28 - INFO -   symmetry_tolerance: 1.0000e-12
+2026-05-18 11:37:29 - INFO - Figure exported: /home/maicon/Dropbox/OPFN/RepositorioGit/Simulation/Base de Zernike Polar/figures/Estudo_Operador_S.pdf
+2026-05-18 11:37:30 - INFO - ============================================================
+2026-05-18 11:37:30 - INFO - DIAGNOSTICS: Operator chi
+2026-05-18 11:37:30 - INFO - ============================================================
+2026-05-18 11:37:30 - INFO -   correctness_error: 0.0000e+00
+2026-05-18 11:37:30 - INFO -   C_mu_symmetry_error: 0.0000e+00
+2026-05-18 11:37:30 - INFO -   D_symmetry_error: 0.0000e+00
+2026-05-18 11:37:30 - INFO -   finite: True
+2026-05-18 11:37:30 - INFO -   chirality_stats: mean=1.8850e+03, std=4.3858e+02, min=9.3714e+02, max=3.2714e+03, median=1.8688e+03
+2026-05-18 11:37:30 - INFO -   status: PASS
+2026-05-18 11:37:30 - INFO -   tolerance: 1.0000e-12
+2026-05-18 11:37:30 - INFO -   symmetry_tolerance: 1.0000e-12
+2026-05-18 11:37:31 - INFO - Figure exported: /home/maicon/Dropbox/OPFN/RepositorioGit/Simulation/Base de Zernike Polar/figures/Estudo_Operador_chi.pdf
+2026-05-18 11:37:31 - INFO - ============================================================
+2026-05-18 11:37:31 - INFO - DIAGNOSTICS: Operator Dr
+2026-05-18 11:37:31 - INFO - ============================================================
+2026-05-18 11:37:31 - INFO -   correctness_error: 0.0000e+00
+2026-05-18 11:37:31 - INFO -   finite: True
+2026-05-18 11:37:31 - INFO -   dr_stats: mean=-1.0891e+03, std=3.6190e+01, min=-1.1840e+03, max=-9.7074e+02, median=-1.0883e+03
+2026-05-18 11:37:31 - INFO -   epsilon_floor: -2.2657e+03
+2026-05-18 11:37:31 - INFO -   pure_homogeneous_rays: 0
+2026-05-18 11:37:31 - INFO -   status: PASS
+2026-05-18 11:37:31 - INFO -   tolerance: 1.0000e-12
+2026-05-18 11:37:31 - INFO -   epsilon: 1.0000e-06
+2026-05-18 11:37:32 - INFO - Figure exported: /home/maicon/Dropbox/OPFN/RepositorioGit/Simulation/Base de Zernike Polar/figures/Estudo_Operador_Dr.pdf
+2026-05-18 11:37:32 - INFO - ============================================================
+2026-05-18 11:37:32 - INFO - DIAGNOSTICS: Operator R
+2026-05-18 11:37:32 - INFO - ============================================================
+2026-05-18 11:37:32 - INFO -   parseval_error: 1.3878e-16
+2026-05-18 11:37:32 - INFO -   correctness_error: 1.3878e-16
+2026-05-18 11:37:32 - INFO -   finite: True
+2026-05-18 11:37:32 - INFO -   energy_stats: 0={'mean': 0.43389621445112725, 'std': 0.065053536097838}, 1={'mean': 0.48081387121710134, 'std': 0.205428109697275}, 2={'mean': 0.026228978220198297, 'std': 0.02157982227737608}, 3={'mean': 0.3857060313191394, 'std': 0.08931234981884899}
+2026-05-18 11:37:32 - INFO -   zero_energy_rays_per_mode: [0, 0, 0, 0]
+2026-05-18 11:37:32 - INFO -   K_freq: 5
+2026-05-18 11:37:32 - INFO -   status: PASS
+2026-05-18 11:37:32 - INFO -   tolerance: 1.0000e-10
+2026-05-18 11:37:34 - INFO - Figure exported: /home/maicon/Dropbox/OPFN/RepositorioGit/Simulation/Base de Zernike Polar/figures/Estudo_Operador_R.pdf
+2026-05-18 11:37:34 - INFO - ============================================================
+2026-05-18 11:37:34 - INFO - VALIDATION SUMMARY
+2026-05-18 11:37:34 - INFO - ============================================================
+2026-05-18 11:37:34 - INFO - Op     Correctness    Status
+2026-05-18 11:37:34 - INFO - ----------------------------
+2026-05-18 11:37:34 - INFO - O      0.00e+00       PASS  
+2026-05-18 11:37:34 - INFO - S      0.00e+00       PASS  
+2026-05-18 11:37:34 - INFO - chi    0.00e+00       PASS  
+2026-05-18 11:37:34 - INFO - Dr     0.00e+00       PASS  
+2026-05-18 11:37:34 - INFO - R      1.39e-16       PASS  
+2026-05-18 11:37:34 - INFO - 
+Result: 5/5 PASSED.
+2026-05-18 11:37:34 - INFO - ============================================================
