@@ -292,7 +292,12 @@ where $\boldsymbol{\mu}\_{k,m} \in \mathbb{R}^Q$ is the vector of micro-space co
 
 The reciprocal operator transposes the structure of the micro-space field along the radial axis to the spatial frequency domain, exposing characteristic vibrational modes. The transformation is applied vectorially over the depth axis $k$, computing the magnitude of the spectrum for each coefficient mode $q$, preserving the real tensorial dimensionality:
 
-$$|\boldsymbol{\psi}^R_m\rangle_z = \hat{R}\,|\boldsymbol{\mu}_m\rangle_z = \begin{bmatrix} \tilde{\boldsymbol{\mu}}_{1,m} \\ \tilde{\boldsymbol{\mu}}_{2,m} \\ \vdots \\ \tilde{\boldsymbol{\mu}}_{N',m} \end{bmatrix} \in \mathbb{R}^{N' \times Q} \quad \textbf{[Eq. 8e]}$$
+$$|\boldsymbol{\psi}^R_m\rangle_z = \hat{R}\,|\boldsymbol{\mu}_m\rangle_z = \begin{bmatrix}
+\tilde{\boldsymbol{\mu}}_{1,m} \\
+\tilde{\boldsymbol{\mu}}_{2,m} \\
+\vdots \\
+\tilde{\boldsymbol{\mu}}_{N',m}
+\end{bmatrix} \in \mathbb{R}^{N' \times Q} \quad \textbf{[Eq. 8e]}$$
 
 where each row $\tilde{\boldsymbol{\mu}}\_{k,m} \in \mathbb{R}^Q$ contains the magnitude of the $k$-th Fourier coefficient of the packets along the radial axis:
 
@@ -369,7 +374,20 @@ After the independent processing of all slices, we obtain, for each ray indexed 
 
 For each ray $(m, z)$, a dense vector groups the corrected costs of the five operators, the respective spectral completions, the macro-space cost, and the residual variance of the sentinel:
 
-$$\mathbf{T}_{meta}(m, z) = \begin{bmatrix} C_{Macro}(m, z) \\ \sigma_{Macro}(m, z) \\ C^{corr}_O(m, z) \\ C^{corr}_S(m, z) \\ C^{corr}_\chi(m, z) \\ C^{corr}_{D_r}(m, z) \\ C^{corr}_R(m, z) \\ \eta_O(z) \\ \eta_S(z) \\ \eta_\chi(z) \\ \eta_{D_r}(z) \\ \eta_R(z) \end{bmatrix} \in \mathbb{R}^{12} \quad \textbf{[Eq. 17]}$$
+$$\mathbf{T}_{meta}(m, z) = \begin{bmatrix}
+C_{Macro}(m, z) \\
+\sigma_{Macro}(m, z) \\
+C^{corr}_O(m, z) \\
+C^{corr}_S(m, z) \\
+C^{corr}_\chi(m, z) \\
+C^{corr}_{D_r}(m, z) \\
+C^{corr}_R(m, z) \\
+\eta_O(z) \\
+\eta_S(z) \\
+\eta_\chi(z) \\
+\eta_{D_r}(z) \\
+\eta_R(z)
+\end{bmatrix} \in \mathbb{R}^{12} \quad \textbf{[Eq. 17]}$$
 
 where $C\_{Macro}(m,z)$ is the OPF cost in the macro-space graph, serving as an anatomical normality reference; $\sigma\_{Macro}(m,z) = \||\mathbf{V}\_m\rangle\_z - \hat{C}\_{Macro}(z)|\mathbf{V}\_m\rangle\_z\|^2\_J$ is the residual reconstruction variance, functioning as a domain sentinel. Large-scale anomalies that perturb the dominant modes produce an abnormally high $\sigma\_{Macro}$, signaling to the system that the case is outside the projected domain; $C^{corr}\_y(m,z)$ are the corrected costs of the five operators (Eq. 16); and $\eta\_y(z)$ are the corresponding spectral completions (Eq. 12). The extensibility of the tensor is immediate: the addition of new operators expands $\mathbf{T}\_{meta}$ to $\mathbb{R}^{2+2n\_y}$ without modifying the pipeline structure.
 
@@ -415,7 +433,11 @@ where $\mathbf{f}\_k, \mathbf{g}\_k \in \mathbb{R}^Q$ are the spectral coefficie
 
 **Projection:** The exacerbated states $\{|\boldsymbol{\psi}^y\_{m,z}\rangle\}\_{m,z}$ are not mutually orthogonal ( neighboring rays share correlational structure) such that a direct projection would be ill-conditioned. To couple the precursor identity $|\mathbf{A}^y\_{precursor}\rangle$ to the basis of exacerbated states in a numerically stable manner, the **pseudoinverse** $\tilde{C}\_y^+$ of the purified matrix is used (which acts as the Gram matrix of the subspace), discarding null variance directions. The **Projected Coherence Vector** $\mathbf{P}\_y(z) \in \mathbb{R}^M$ for slice $z$ is:
 
-$$\mathbf{P}_y(z) = \tilde{C}_y(z)^{+} \begin{bmatrix} \langle\mathbf{A}^y_{precursor}\,|\,\boldsymbol{\psi}^y_{1,z}\rangle_J \\ \vdots \\ \langle\mathbf{A}^y_{precursor}\,|\,\boldsymbol{\psi}^y_{M,z}\rangle_J \end{bmatrix} \quad \textbf{[Eq. 21]}$$
+$$\mathbf{P}_y(z) = \tilde{C}_y(z)^{+} \begin{bmatrix}
+\langle\mathbf{A}^y_{precursor}\,|\,\boldsymbol{\psi}^y_{1,z}\rangle_J \\
+\vdots \\
+\langle\mathbf{A}^y_{precursor}\,|\,\boldsymbol{\psi}^y_{M,z}\rangle_J
+\end{bmatrix} \quad \textbf{[Eq. 21]}$$
 
 The $m$-th component $\mathbf{P}\_{y,m}(z)$ measures how much of the state of ray $(m,z)$ is collinear with the precursor signature $|\mathbf{A}^y\_{precursor}\rangle$ under the perspective of operator $y$, corrected by the internal correlation structure of the subspace. Rays whose projection exceeds the coherence threshold $\tau\_y$ (derived from the 95th percentile of projections in the healthy population, as per Conventions) are inserted as **precursor prototypes** in the graph $\mathcal{G}\_{3D}$, composing the set:
 
