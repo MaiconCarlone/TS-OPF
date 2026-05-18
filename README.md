@@ -162,7 +162,12 @@ The choice of basis $\{\phi\_q\}$ is determinant for the quality of the represen
 
 **Fundamental Radial State:** The **Fundamental Radial State** of the image at slice $z$, for angle $\theta\_m$, is the tensorial beam formed by stacking the $N'$ packets along the radial axis, normalized by the Jacobian inner product defined below:
 
-$$|\mathbf{V}_m\rangle_z = \frac{1}{\mathcal{N}} \begin{bmatrix} \mathbf{c}_{1,m} \\ \mathbf{c}_{2,m} \\ \vdots \\ \mathbf{c}_{N',m} \end{bmatrix} \in \mathbb{R}^{N' \times Q} \quad \textbf{[Eq. 1b]}$$
+$$|\mathbf{V}_m\rangle_z = \frac{1}{\mathcal{N}} \begin{bmatrix}
+\mathbf{c}_{1,m} \\
+\mathbf{c}_{2,m} \\
+\vdots \\
+\mathbf{c}_{N',m}
+\end{bmatrix} \in \mathbb{R}^{N' \times Q} \quad \textbf{[Eq. 1b]}$$
 
 where $\mathcal{N}$ is the normalization constant ensuring $\langle\mathbf{V}\_m\,|\,\mathbf{V}\_m\rangle\_J = 1$ under the metric defined in the following equation.
 
